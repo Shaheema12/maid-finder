@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MaidFinder</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="search.html">Find Maid</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Find Reliable Maids in Your Area</h1>
+        <p>Connect with verified household help for all your needs</p>
+        <div class="search-box">
+            <select id="citySelect">
+                <option value="">Select City</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="chennai">Chennai</option>
+            </select>
+            <select id="areaSelect" disabled>
+                <option value="">Select Area</option>
+            </select>
+            <button onclick="window.location.href='search.html'">Search</button>
+        </div>
+    </header>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="images/cleaning.jpg" alt="Cleaning">
+                <h3>Cleaning</h3>
+                <p>Professional house cleaning services</p>
+            </div>
+            <div class="service-card">
+                <img src="images/cooking.jpg" alt="Cooking">
+                <h3>Cooking</h3>
+                <p>Experienced cooks for all cuisines</p>
+            </div>
+            <div class="service-card">
+                <img src="images/childcare.jpg" alt="Childcare">
+                <h3>Childcare</h3>
+                <p>Reliable babysitting services</p>
+            </div>
+            <div class="service-card">
+                <img src="images/eldercare.jpg" alt="Eldercare">
+                <h3>Elderly Care</h3>
+                <p>Compassionate elderly care services</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Search</h3>
+                <p>Enter your location to find available maids</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose</h3>
+                <p>Select from verified maids in your area</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Contact</h3>
+                <p>Connect with your chosen maid directly</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MaidFinder</h3>
+                <p>Connecting homeowners with reliable household help</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="search.html">Find Maid</a>
+                <a href="register.html">Register</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@maidfinder.com</p>
+                <p>Phone: +91 9876543210</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MaidFinder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

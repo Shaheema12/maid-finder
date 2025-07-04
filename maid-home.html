@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maid Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #ffc1da);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(255, 105, 180, 0.25);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #ff1493;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+
+    .options {
+      display: grid;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .option {
+      background: #ffeaf3;
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background: #ffd6e8;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    }
+
+    .option i {
+      font-size: 24px;
+      color: #ff69b4;
+      margin-right: 15px;
+    }
+
+    .option span {
+      font-weight: 500;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    .logout-btn {
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #ff1493;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .option span {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome, Maid!</h1>
+    <p class="subtitle">Choose an action below to continue:</p>
+
+    <div class="options">
+      <div class="option" onclick="alert('Viewing jobs...')">
+        <i class="ph ph-briefcase"></i>
+        <span>View Job Offers</span>
+      </div>
+      <div class="option" onclick="alert('Updating profile...')">
+        <i class="ph ph-user-circle"></i>
+        <span>Update Your Profile</span>
+      </div>
+      <div class="option" onclick="alert('Checking schedule...')">
+        <i class="ph ph-calendar-check"></i>
+        <span>Check Schedule</span>
+      </div>
+      <div class="option" onclick="alert('Contacting admin...')">
+        <i class="ph ph-chat-circle-text"></i>
+        <span>Contact Admin</span>
+      </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = 'welcome.html'; // Redirect to welcome or login
+    }
+  </script>
+</body>
+</html>

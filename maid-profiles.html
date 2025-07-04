@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Maid Profiles</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+      background: url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      overflow-y: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff69b4;
+      text-shadow: 0 0 10px #ff1493;
+    }
+
+    .profiles-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      width: 280px;
+      box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 0 10px #ff1493;
+    }
+
+    .profile-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    .profile-info {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+
+    .back-btn {
+      display: block;
+      width: 120px;
+      margin: 30px auto 0;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ff1493, #ff69b4);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      box-shadow: 0 0 30px rgba(255, 20, 147, 0.9);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Maid Profiles</h1>
+
+  <div class="profiles-container">
+    <!-- Example profile -->
+    <div class="profile-card">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Priya Sharma" class="profile-photo" />
+      <div class="profile-name">Priya Sharma</div>
+      <div class="profile-info"><strong>Age:</strong> 28</div>
+      <div class="profile-info"><strong>Email:</strong> priya.sharma@example.com</div>
+      <div class="profile-info"><strong>Expected Salary:</strong> ₹12,000</div>
+      <div class="profile-info"><strong>Location:</strong> Mumbai</div>
+    </div>
+
+    <div class="profile-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Anita Patel" class="profile-photo" />
+      <div class="profile-name">Anita Patel</div>
+      <div class="profile-info"><strong>Age:</strong> 32</div>
+      <div class="profile-info"><strong>Email:</strong> anita.patel@example.com</div>
+      <div class="profile-info"><strong>Expected Salary:</strong> ₹10,500</div>
+      <div class="profile-info"><strong>Location:</strong> Ahmedabad</div>
+    </div>
+
+    <div class="profile-card">
+      <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Meera Joshi" class="profile-photo" />
+      <div class="profile-name">Meera Joshi</div>
+      <div class="profile-info"><strong>Age:</strong> 26</div>
+      <div class="profile-info"><strong>Email:</strong> meera.joshi@example.com</div>
+      <div class="profile-info"><strong>Expected Salary:</strong> ₹9,000</div>
+      <div class="profile-info"><strong>Location:</strong> Pune</div>
+    </div>
+  </div>
+
+  <button class="back-btn" onclick="window.location.href='maid-details.html'">Back to Form</button>
+
+</body>
+</html>

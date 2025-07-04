@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Maid Finder</title>
+  <style>
+    /* Your dashboard CSS styles here */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      color: #ff69b4;
+      font-size: 24px;
+      position: relative;
+    }
+    .container {
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #222;
+      color: #fff;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background-color: #333;
+      color: #ff69b4;
+    }
+    tr:hover {
+      background-color: #444;
+    }
+    .logout {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .logout:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Welcome, Admin
+    <button class="logout" onclick="logout()">Logout</button>
+  </header>
+
+  <div class="container">
+    <h2>Registered Maids</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Location</th>
+          <th>Experience</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody id="maidTableBody">
+        <!-- Maids will be loaded here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const maidList = [
+      { name: 'Asha Kumari', age: 35, location: 'Mumbai', experience: '5 years', phone: '9876543210' },
+      { name: 'Rekha Devi', age: 28, location: 'Delhi', experience: '3 years', phone: '9123456789' },
+      { name: 'Sunita Rani', age: 40, location: 'Bangalore', experience: '7 years', phone: '9988776655' },
+      { name: 'Radha Patil', age: 30, location: 'Pune', experience: '4 years', phone: '8887665544' },
+      { name: 'Meena Singh', age: 26, location: 'Chennai', experience: '2 years', phone: '9871234567' },
+      { name: 'Kavita Joshi', age: 34, location: 'Lucknow', experience: '6 years', phone: '9765432109' },
+      { name: 'Lata Yadav', age: 38, location: 'Nagpur', experience: '10 years', phone: '9012345678' },
+      { name: 'Sita Das', age: 29, location: 'Kolkata', experience: '3 years', phone: '8899776655' },
+      { name: 'Anita Sharma', age: 27, location: 'Jaipur', experience: '5 years', phone: '7788996655' },
+      { name: 'Pooja Rani', age: 31, location: 'Surat', experience: '7 years', phone: '9988771122' },
+      { name: 'Neelam Bhatt', age: 36, location: 'Ahmedabad', experience: '9 years', phone: '9856231478' },
+      { name: 'Gita Kumari', age: 24, location: 'Patna', experience: '2 years', phone: '9638527410' },
+      { name: 'Rani Verma', age: 33, location: 'Indore', experience: '6 years', phone: '9123984756' },
+      { name: 'Maya Pillai', age: 45, location: 'Kochi', experience: '15 years', phone: '9823412345' },
+      { name: 'Bimla Devi', age: 37, location: 'Ranchi', experience: '8 years', phone: '9988997766' },
+      { name: 'Kamala Devi', age: 42, location: 'Bhopal', experience: '12 years', phone: '9090909090' },
+      { name: 'Uma Patel', age: 23, location: 'Vadodara', experience: '1 year', phone: '9111223344' },
+      { name: 'Seema Raj', age: 39, location: 'Noida', experience: '10 years', phone: '9012456789' },
+      { name: 'Chitra Jain', age: 28, location: 'Gurgaon', experience: '4 years', phone: '9874561230' },
+      { name: 'Deepa Nair', age: 32, location: 'Trivandrum', experience: '6 years', phone: '9658741230' }
+    ];
+
+    const tableBody = document.getElementById('maidTableBody');
+
+    maidList.forEach(maid => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${maid.name}</td>
+        <td>${maid.age}</td>
+        <td>${maid.location}</td>
+        <td>${maid.experience}</td>
+        <td>${maid.phone}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    function logout() {
+      window.location.href = 'admin-login.html';
+    }
+  </script>
+</body>
+</html>
